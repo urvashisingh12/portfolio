@@ -1,12 +1,13 @@
- :root {
-  --primary-color: #6A0DAD;
-  --secondary-color: #E0E0E0;
-  --accent-color: #008080;
+:root {
+  --primary-color: #6A0DAD;        /* Deep Purple */
+  --secondary-color: #E0E0E0;      /* Light Gray */
+  --accent-color: #008080;         /* Teal */
 
-  --light-bg: #fdfdfd;
-  --light-text: #1a1a1a;
-  --dark-bg: #121212;
-  --dark-text: #ffffff;
+  --light-bg: #ffffff;
+  --light-text: #121212;
+
+  --dark-bg: #0e0e0e;              /* Deeper Black */
+  --dark-text: #f1f1f1;            /* Softer White */
 
   --transition-speed: 0.3s;
   --body-font: 'Segoe UI', Tahoma, sans-serif;
@@ -27,7 +28,7 @@ body.light-mode {
   color: var(--light-text);
 }
 
-/* Example heading */
+/* Headings and paragraphs */
 h1, h2, p {
   transition: color var(--transition-speed);
 }
@@ -41,7 +42,7 @@ h1, h2, p {
   border-radius: 30px;
   font-size: 14px;
   cursor: pointer;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   transition: all var(--transition-speed);
 }
 
@@ -50,9 +51,7 @@ body.light-mode .btn {
   color: white;
 }
 
-
-
-
+/* 🌗 Theme Toggle Button - Cute & Glowy */
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -64,10 +63,17 @@ body.light-mode .btn {
   background-color: var(--primary-color);
   color: #fff;
   border: none;
+  box-shadow: 0 0 12px rgba(106, 13, 173, 0.6); /* Purple glow */
   transition: all 0.3s ease;
 }
 
 .theme-toggle:hover {
   background-color: var(--accent-color);
   transform: scale(1.05);
+}
+
+body.light-mode .theme-toggle {
+  background-color: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 128, 128, 0.4); /* Teal glow in light mode */
 }
