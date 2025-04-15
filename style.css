@@ -1,43 +1,73 @@
-<style>
-  :root {
-    --primary-color: #6A0DAD;
-    --secondary-color: #E0E0E0;
-    --accent-color: #008080;
-    
-    --light-bg: #f4f4f4;
-    --light-text: #1a1a1a;
-    --dark-bg: #1a1a2e;
-    --dark-text: #ffffff;
-    
-    --body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+ :root {
+  --primary-color: #6A0DAD;
+  --secondary-color: #E0E0E0;
+  --accent-color: #008080;
 
-  body {
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
-    font-family: var(--body-font);
-    margin: 0;
-    transition: 0.3s;
-  }
+  --light-bg: #fdfdfd;
+  --light-text: #1a1a1a;
+  --dark-bg: #121212;
+  --dark-text: #ffffff;
 
-  body.light-mode {
-    background-color: var(--light-bg);
-    color: var(--light-text);
-  }
+  --transition-speed: 0.3s;
+  --body-font: 'Segoe UI', Tahoma, sans-serif;
+}
 
-  body.light-mode .footer {
-    background-color: var(--secondary-color);
-    color: var(--light-text);
-  }
+/* Base body styling */
+body {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  font-family: var(--body-font);
+  margin: 0;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
 
-  body.light-mode .btn {
-    background-color: var(--accent-color);
-    color: white;
-  }
+/* Light Mode styles */
+body.light-mode {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
 
-  body.light-mode .btn:hover {
-    background-color: var(--primary-color);
-  }
+/* Example heading */
+h1, h2, p {
+  transition: color var(--transition-speed);
+}
 
-  /* Keep your previous styles for headings, links, etc. */
-</style>
+/* Light & Dark Button Style */
+.btn {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  transition: all var(--transition-speed);
+}
+
+body.light-mode .btn {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+
+
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
