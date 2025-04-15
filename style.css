@@ -1,0 +1,43 @@
+<style>
+  :root {
+    --primary-color: #6A0DAD;
+    --secondary-color: #E0E0E0;
+    --accent-color: #008080;
+    
+    --light-bg: #f4f4f4;
+    --light-text: #1a1a1a;
+    --dark-bg: #1a1a2e;
+    --dark-text: #ffffff;
+    
+    --body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    font-family: var(--body-font);
+    margin: 0;
+    transition: 0.3s;
+  }
+
+  body.light-mode {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+  }
+
+  body.light-mode .footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+  }
+
+  body.light-mode .btn {
+    background-color: var(--accent-color);
+    color: white;
+  }
+
+  body.light-mode .btn:hover {
+    background-color: var(--primary-color);
+  }
+
+  /* Keep your previous styles for headings, links, etc. */
+</style>
