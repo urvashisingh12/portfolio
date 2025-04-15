@@ -3,11 +3,11 @@
   --secondary-color: #E0E0E0;      /* Light Gray */
   --accent-color: #008080;         /* Teal */
 
-  --light-bg: #ffffff;
-  --light-text: #121212;
+  --light-bg: #ffffff;             /* White for Light Mode */
+  --light-text: #121212;           /* Dark Text for Light Mode */
 
-  --dark-bg: #0e0e0e;              /* Deeper Black */
-  --dark-text: #f1f1f1;            /* Softer White */
+  --dark-bg: #000000;              /* Fully Black Background */
+  --dark-text: #f1f1f1;            /* Soft White Text */
 
   --transition-speed: 0.3s;
   --body-font: 'Segoe UI', Tahoma, sans-serif;
@@ -15,8 +15,8 @@
 
 /* Base body styling */
 body {
-  background-color: var(--dark-bg);
-  color: var(--dark-text);
+  background-color: var(--dark-bg);  /* Full black background for dark mode */
+  color: var(--dark-text);           /* Light text for contrast */
   font-family: var(--body-font);
   margin: 0;
   transition: background-color var(--transition-speed), color var(--transition-speed);
@@ -24,16 +24,16 @@ body {
 
 /* Light Mode styles */
 body.light-mode {
-  background-color: var(--light-bg);
-  color: var(--light-text);
+  background-color: var(--light-bg);  /* White background for light mode */
+  color: var(--light-text);            /* Dark text for contrast in light mode */
 }
 
-/* Headings and paragraphs */
+/* Example heading styles */
 h1, h2, p {
   transition: color var(--transition-speed);
 }
 
-/* Light & Dark Button Style */
+/* Button Styles */
 .btn {
   padding: 10px 20px;
   background-color: var(--primary-color);
@@ -42,16 +42,16 @@ h1, h2, p {
   border-radius: 30px;
   font-size: 14px;
   cursor: pointer;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);  /* Slight shadow for buttons */
   transition: all var(--transition-speed);
 }
 
 body.light-mode .btn {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color);  /* Accent color for light mode */
   color: white;
 }
 
-/* 🌗 Theme Toggle Button - Cute & Glowy */
+/* 🌗 Theme Toggle Button (Cute Style with Glow) */
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -63,17 +63,17 @@ body.light-mode .btn {
   background-color: var(--primary-color);
   color: #fff;
   border: none;
-  box-shadow: 0 0 12px rgba(106, 13, 173, 0.6); /* Purple glow */
+  box-shadow: 0 0 12px rgba(106, 13, 173, 0.6);  /* Purple glow */
   transition: all 0.3s ease;
 }
 
 .theme-toggle:hover {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color);  /* Teal hover effect */
   transform: scale(1.05);
 }
 
 body.light-mode .theme-toggle {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color);  /* Accent color in light mode */
   color: #fff;
-  box-shadow: 0 0 10px rgba(0, 128, 128, 0.4); /* Teal glow in light mode */
+  box-shadow: 0 0 10px rgba(0, 128, 128, 0.4);  /* Teal glow in light mode */
 }
